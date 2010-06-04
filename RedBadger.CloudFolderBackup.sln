@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBadger.CloudFolderBackup.ConsoleApp", "RedBadger.CloudFolderBackup.ConsoleApp\RedBadger.CloudFolderBackup.ConsoleApp.csproj", "{87C783FB-DD5D-4777-B7CB-B52B3919F1B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{35D4E586-5838-438D-9AFC-8654BF0B92D6}"
+	ProjectSection(SolutionItems) = preProject
+		Settings.StyleCop = Settings.StyleCop
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBadger.CloudFolderBackup.Specs", "RedBadger.CloudFolderBackup.Specs\RedBadger.CloudFolderBackup.Specs.csproj", "{07FC15C9-1CA7-4AE9-8E04-0E3D8ABC250F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBadger.CloudFolderBackup", "RedBadger.CloudFolderBackup\RedBadger.CloudFolderBackup.csproj", "{2E59A4E9-359D-4D8E-9CBC-AA69C21A712C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87C783FB-DD5D-4777-B7CB-B52B3919F1B4}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{87C783FB-DD5D-4777-B7CB-B52B3919F1B4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{87C783FB-DD5D-4777-B7CB-B52B3919F1B4}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{87C783FB-DD5D-4777-B7CB-B52B3919F1B4}.Debug|x86.ActiveCfg = Debug|x86
+		{87C783FB-DD5D-4777-B7CB-B52B3919F1B4}.Debug|x86.Build.0 = Debug|x86
+		{87C783FB-DD5D-4777-B7CB-B52B3919F1B4}.Release|Any CPU.ActiveCfg = Release|x86
+		{87C783FB-DD5D-4777-B7CB-B52B3919F1B4}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{87C783FB-DD5D-4777-B7CB-B52B3919F1B4}.Release|Mixed Platforms.Build.0 = Release|x86
+		{87C783FB-DD5D-4777-B7CB-B52B3919F1B4}.Release|x86.ActiveCfg = Release|x86
+		{87C783FB-DD5D-4777-B7CB-B52B3919F1B4}.Release|x86.Build.0 = Release|x86
+		{07FC15C9-1CA7-4AE9-8E04-0E3D8ABC250F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07FC15C9-1CA7-4AE9-8E04-0E3D8ABC250F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07FC15C9-1CA7-4AE9-8E04-0E3D8ABC250F}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{07FC15C9-1CA7-4AE9-8E04-0E3D8ABC250F}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{07FC15C9-1CA7-4AE9-8E04-0E3D8ABC250F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{07FC15C9-1CA7-4AE9-8E04-0E3D8ABC250F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07FC15C9-1CA7-4AE9-8E04-0E3D8ABC250F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07FC15C9-1CA7-4AE9-8E04-0E3D8ABC250F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{07FC15C9-1CA7-4AE9-8E04-0E3D8ABC250F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{07FC15C9-1CA7-4AE9-8E04-0E3D8ABC250F}.Release|x86.ActiveCfg = Release|Any CPU
+		{2E59A4E9-359D-4D8E-9CBC-AA69C21A712C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E59A4E9-359D-4D8E-9CBC-AA69C21A712C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E59A4E9-359D-4D8E-9CBC-AA69C21A712C}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{2E59A4E9-359D-4D8E-9CBC-AA69C21A712C}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{2E59A4E9-359D-4D8E-9CBC-AA69C21A712C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2E59A4E9-359D-4D8E-9CBC-AA69C21A712C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E59A4E9-359D-4D8E-9CBC-AA69C21A712C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E59A4E9-359D-4D8E-9CBC-AA69C21A712C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2E59A4E9-359D-4D8E-9CBC-AA69C21A712C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2E59A4E9-359D-4D8E-9CBC-AA69C21A712C}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
