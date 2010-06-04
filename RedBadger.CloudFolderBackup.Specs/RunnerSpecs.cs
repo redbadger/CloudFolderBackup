@@ -15,7 +15,7 @@ namespace RedBadger.CloudFolderBackup.Specs
 
     public abstract class a_Runner
     {
-        protected static IFolderConnection folderConnection;
+        protected static IFolderConnection sourceFolder;
 
         protected static IConnection cloudConnection;
 
@@ -23,9 +23,9 @@ namespace RedBadger.CloudFolderBackup.Specs
 
         private Establish context = () =>
             {
-                folderConnection = MockRepository.GenerateStub<IFolderConnection>();
+                sourceFolder = MockRepository.GenerateStub<IFolderConnection>();
                 cloudConnection = MockRepository.GenerateStub<IConnection>();
-                runner = new Runner(folderConnection, cloudConnection);
+                runner = new Runner(sourceFolder, cloudConnection);
             };
     }
 
@@ -36,7 +36,7 @@ namespace RedBadger.CloudFolderBackup.Specs
 
         static Exception Exception;
 
-        private Establish context = () => folderConnection.Expect(c => c.IsValid()).Return(false);
+        private Establish context = () => sourceFolder.Expect(c => c.IsValid()).Return(false);
 
         private Because of = () => Exception = Catch.Exception(() => runner.Run(containerName));
 
@@ -48,7 +48,7 @@ namespace RedBadger.CloudFolderBackup.Specs
     {
         static Exception Exception;
 
-        Establish context = () => folderConnection.Expect(c => c.IsValid()).Return(true);
+        Establish context = () => sourceFolder.Expect(c => c.IsValid()).Return(true);
 
         private Because of = () => Exception = Catch.Exception(() => runner.Run("Container"));
 
