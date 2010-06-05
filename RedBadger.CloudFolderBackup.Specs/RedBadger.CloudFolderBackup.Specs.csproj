@@ -85,7 +85,7 @@
     <Compile Include="FolderConnectionSpecs.cs" />
     <Compile Include="ICollectionExtensionSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RunnerSpecs.cs" />
+    <Compile Include="UploaderSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RedBadger.CloudFolderBackup\RedBadger.CloudFolderBackup.csproj">

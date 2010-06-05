@@ -1,6 +1,6 @@
 ﻿namespace RedBadger.CloudFolderBackup
 {
-    public interface IRunner
+    public interface IUploader
     {
         void Run(string containerName);
     }

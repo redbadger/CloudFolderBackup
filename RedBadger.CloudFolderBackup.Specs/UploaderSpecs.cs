@@ -13,24 +13,24 @@ namespace RedBadger.CloudFolderBackup.Specs
 
     using Rhino.Mocks;
 
-    public abstract class a_Runner
+    public abstract class a_Uploader
     {
         protected static IFolderConnection sourceFolder;
 
         protected static IConnection cloudConnection;
 
-        protected static IRunner runner;
+        protected static IUploader Uploader;
 
         private Establish context = () =>
             {
                 sourceFolder = MockRepository.GenerateStub<IFolderConnection>();
                 cloudConnection = MockRepository.GenerateStub<IConnection>();
-                runner = new Runner(sourceFolder, cloudConnection);
+                Uploader = new Uploader(sourceFolder, cloudConnection);
             };
     }
 
-    [Subject(typeof(Runner))]
-    public class when_started_with_a_nonexistant_folder : a_Runner
+    [Subject(typeof(Uploader))]
+    public class when_started_with_a_nonexistant_folder : a_Uploader
     {
         private const string containerName = "Container";
 
@@ -38,19 +38,19 @@ namespace RedBadger.CloudFolderBackup.Specs
 
         private Establish context = () => sourceFolder.Expect(c => c.IsValid()).Return(false);
 
-        private Because of = () => Exception = Catch.Exception(() => runner.Run(containerName));
+        private Because of = () => Exception = Catch.Exception(() => Uploader.Run(containerName));
 
         private It should_fail = () => Exception.ShouldBeOfType<DirectoryNotFoundException>();
     }
 
-    [Subject(typeof(Runner))]
-    public class when_started_with_a_nonexistant_cloud_container : a_Runner
+    [Subject(typeof(Uploader))]
+    public class when_started_with_a_nonexistant_cloud_container : a_Uploader
     {
         static Exception Exception;
 
         Establish context = () => sourceFolder.Expect(c => c.IsValid()).Return(true);
 
-        private Because of = () => Exception = Catch.Exception(() => runner.Run("Container"));
+        private Because of = () => Exception = Catch.Exception(() => Uploader.Run("Container"));
 
         private It should_fail = () => Exception.ShouldBeOfType<IndexOutOfRangeException>();
     }

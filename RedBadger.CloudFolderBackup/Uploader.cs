@@ -2,29 +2,22 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Configuration;
     using System.IO;
 
     using com.mosso.cloudfiles;
 
-    using RedBadger.CloudFolderBackup.Configuration;
     using RedBadger.CloudFolderBackup.Extensions;
 
-    public class Runner : IRunner
+    public class Uploader : IUploader
     {
         private readonly IConnection cloudConnection;
 
         private readonly IFolderConnection folderConnection;
 
-        private static CloudFolderBackupSection config;
-
-        public Runner(IFolderConnection folderConnection, IConnection cloudConnection)
+        public Uploader(IFolderConnection folderConnection, IConnection cloudConnection)
         {
             this.folderConnection = folderConnection;
             this.cloudConnection = cloudConnection;
-
-            config = (CloudFolderBackupSection)ConfigurationManager.GetSection("cloudFolderBackupGroup/cloudFolderBackup");
-            string username = config.Credentials.Username;
         }
 
         public void Run(string containerName)
