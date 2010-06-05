@@ -4,6 +4,8 @@
     {
         string Path { get; }
 
+        string ZipName { get; }
+
         bool IsValid();
     }
 }

@@ -9,11 +9,16 @@ namespace RedBadger.CloudFolderBackup.Specs
     [Subject(typeof(IFolderConnection))]
     public class when_initialised_with_a_valid_path
     {
+        private const string folderName = "Windows";
+
         protected static IFolderConnection folderConnection;
 
-        private Establish context = () => folderConnection = new FolderConnection(@"C:\Windows");
+        private Establish context = () => folderConnection = new FolderConnection(string.Format(@"C:\{0}", folderName));
 
         private It should_be_valid = () => folderConnection.IsValid().ShouldBeTrue();
+
+        private It should_return_the_foldername_as_the_zip_name =
+            () => folderConnection.ZipName.ShouldEqual(string.Format("{0}.zip", folderName));
     }
 
     [Subject(typeof(IFolderConnection))]

@@ -6,6 +6,8 @@
 
     using com.mosso.cloudfiles;
 
+    using Ionic.Zip;
+
     using RedBadger.CloudFolderBackup.Extensions;
 
     public class Uploader : IUploader
@@ -32,6 +34,18 @@
             if (containers.IsNullOrEmpty() || !containers.Contains(containerName))
             {
                 throw new IndexOutOfRangeException(string.Format("Could not find Container: {0}", containerName));
+            }
+
+            using (var stream = new MemoryStream())
+            {
+                using (var zipFile = new ZipFile())
+                {
+                    zipFile.AddDirectory(this.folderConnection.Path);
+                    zipFile.Save(stream);
+
+                    stream.Seek(0, SeekOrigin.Begin);
+                    this.cloudConnection.PutStorageItem(containerName, stream, this.folderConnection.ZipName);
+                }
             }
         }
     }
