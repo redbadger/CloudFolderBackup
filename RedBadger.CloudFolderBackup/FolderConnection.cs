@@ -2,8 +2,6 @@
 {
     using System.IO;
 
-    using Ionic.Zip;
-
     public class FolderConnection : IFolderConnection
     {
         public FolderConnection(string path)

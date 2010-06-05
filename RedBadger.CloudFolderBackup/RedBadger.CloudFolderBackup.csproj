@@ -68,6 +68,7 @@
       <HintPath>..\Lib\DotNetZipLib\Ionic.Zip.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -76,6 +77,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\CloudFolderBackupSection.cs" />
+    <Compile Include="Configuration\CredentialsElement.cs" />
     <Compile Include="Extensions\ICollectionExtensions.cs" />
     <Compile Include="FolderConnection.cs" />
     <Compile Include="IFolderConnection.cs" />
