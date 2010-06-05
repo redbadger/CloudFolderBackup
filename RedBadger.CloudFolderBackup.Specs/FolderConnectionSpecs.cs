@@ -28,6 +28,6 @@ namespace RedBadger.CloudFolderBackup.Specs
 
         private Establish context = () => folderConnection = new FolderConnection(@"C:\ThisFolderShouldNeverExxxist");
 
-        private It should_be_valid = () => folderConnection.IsValid().ShouldBeFalse();
+        private It should_not_be_valid = () => folderConnection.IsValid().ShouldBeFalse();
     }
 }

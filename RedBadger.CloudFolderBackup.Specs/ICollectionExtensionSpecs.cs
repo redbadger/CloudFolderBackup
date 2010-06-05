@@ -20,7 +20,7 @@ namespace RedBadger.CloudFolderBackup.Specs
     [Subject(typeof(ICollection<string>), "IsNullOrEmpty Extension")]
     public class when_empty : a_Initialised_ICollection
     {
-        private It should_return_false = () => collection.IsNullOrEmpty().ShouldBeTrue();
+        private It should_return_true = () => collection.IsNullOrEmpty().ShouldBeTrue();
     }
 
     [Subject(typeof(ICollection<string>), "IsNullOrEmpty Extension")]
@@ -28,7 +28,7 @@ namespace RedBadger.CloudFolderBackup.Specs
     {
         private Establish context = () => collection.Add("Item");
 
-        private It should_return_true = () => collection.IsNullOrEmpty().ShouldBeFalse();
+        private It should_return_false = () => collection.IsNullOrEmpty().ShouldBeFalse();
     }
 
     [Subject(typeof(ICollection<string>), "IsNullOrEmpty Extension")]
